@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+    <!-- 配置为开发模式 -->
+    <constant name="struts.devMode" value="true"/>
+    <!-- 配置扩展名 -->
+    <constant name="struts.action.extension" value="action"/>
+    <!-- 不使用 struts2 提供的模板 -->
+    <constant name="struts.ui.theme" value="simple"/>
+
+    <package name="all" extends="struts-default" namespace="/">
+        <global-results>
+            <result name="index">index.jsp</result>
+        </global-results>
+    </package>
+
+    <include file="web/action/qaAction.xml"/>
+
+</struts>
